@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Target
   - Wall
+  - Robber
+  - EscapeTarget
+  - Cop
   layers:
   - Default
   - TransparentFX

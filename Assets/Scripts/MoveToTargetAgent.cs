@@ -12,6 +12,7 @@ public class MoveToTargetAgent : Agent
     [SerializeField] private Color winColour = Color.green;
     [SerializeField] private Color loseColour = Color.red;
     [SerializeField] private Color idleColour = Color.grey;
+    [SerializeField] private Transform opponent;
 
     public override void OnEpisodeBegin()
     {
@@ -23,8 +24,9 @@ public class MoveToTargetAgent : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation(transform.localPosition); // 3
-        sensor.AddObservation(target.localPosition);    // 3
+        sensor.AddObservation(transform.localPosition);
+        sensor.AddObservation(target.localPosition);
+        sensor.AddObservation(opponent.localPosition);
     }
 
     public override void OnActionReceived(ActionBuffers actions)
