@@ -167,7 +167,9 @@ MonoBehaviour:
   robber: {fileID: 2020050009}
   escapeTarget: {fileID: 1658121024}
   roundDuration: 30
-  spawnRange: 7
+  copSpawn: {x: 34.5, y: 0.5, z: -37.9}
+  robberSpawn: {x: -33.6, y: 0.5, z: -37.9}
+  targetSpawn: {x: 0, y: 0.5, z: 54.1}
 --- !u!1 &200717102 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4441675737421459044, guid: 8a57663a79847e54d9fc31fcffdd9206, type: 3}
