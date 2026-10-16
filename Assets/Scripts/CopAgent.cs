@@ -37,7 +37,12 @@ public class CopAgent : Agent
         Vector3 move = new Vector3(moveX, 0f, moveZ);
         move = Vector3.ClampMagnitude(move, 1f);
 
-        transform.localPosition += move * moveSpeed * Time.fixedDeltaTime;
+        Vector3 nextPosition = transform.localPosition + move * moveSpeed * Time.fixedDeltaTime;
+
+        nextPosition.x = Mathf.Clamp(nextPosition.x, -5.25f, 5.25f);
+        nextPosition.z = Mathf.Clamp(nextPosition.z, -5.25f, 5.25f);
+
+        transform.localPosition = nextPosition;
 
         if (MaxStep > 0)
         {
